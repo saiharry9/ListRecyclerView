@@ -28,6 +28,10 @@ class SleepNightAdapter: RecyclerView.Adapter<SleepNightAdapter.ViewHolder>() {
         return SleepNightAdapter.ViewHolder.from(parent)
     }
 
+    override fun onBindViewHolder(holder: SleepNightAdapter.ViewHolder, position: Int) {
+        val item = data[position]
+        holder.bind(item)
+    }
 
     override fun getItemCount(): Int {
         return data.size
@@ -45,10 +49,7 @@ class SleepNightAdapter: RecyclerView.Adapter<SleepNightAdapter.ViewHolder>() {
         }
     }
 
-    override fun onBindViewHolder(holder: SleepNightAdapter.ViewHolder, position: Int) {
-        val item = data[position]
-        holder.bind(item)
-    }
+
 
 
 
